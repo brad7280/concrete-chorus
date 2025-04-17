@@ -6,7 +6,7 @@
   <title>The Concrete Chorus Project</title>
   <style>
     body {
-      font-family: Georgia, serif;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       line-height: 1.6;
       margin: 0;
       padding: 0 10%;
@@ -14,8 +14,8 @@
       color: #222;
     }
     header {
-      background: #e6f2ef;
-      color: #1d3557;
+      background: #F3EAD9;
+      color: #5E969D;
       padding: 2rem 0;
       text-align: center;
     }
@@ -37,7 +37,7 @@
       box-shadow: 0 0 8px rgba(0,0,0,0.05);
     }
     h1, h2, h3 {
-      color: #1d3557;
+      color: #5E969D;
     }
     ul {
       margin-left: 1.5rem;
@@ -49,18 +49,54 @@
 </head>
 <body>
   <header>
-    <h1>The Concrete Chorus Project</h1>
+    <img src="Concrete Chorus Logo.png" alt="Concrete Chorus Logo" style="max-width: 150px; height: auto; display: block; margin: 0 auto 1rem auto;" />
+    <h1><a href="index.html" style="text-decoration: none; color: inherit;">The Concrete Chorus Project</a></h1>
     <h3>A Study of Urban Bird Song | Spring 2025</h3>
   </header>
 
   <nav>
-  <a href="overview.html">Overview</a>
+  <a href="background.html">Background</a>
   <a href="instructions.html">Instructions</a>
-  <a href="equipment.html">Equipment</a>
-  <a href="schedule.html">Schedule</a>
   <a href="questions.html">Questions</a>
+  <div style="display: inline-block; position: relative;">
+    <a href="#" style="cursor: pointer;">Participating Cities ▾</a>
+    <div style="position: absolute; background: white; border: 1px solid #ccc; padding: 0.5rem; display: none;" onmouseleave="this.style.display='none'">
+      <a href="participating_cities.html" style="display: block; margin: 0.2rem 0; color: #264653;">Durham</a>
+      <a href="chicago-map.html" style="display: block; margin: 0.2rem 0; color: #264653;">Chicago</a>
+    </div>
+  </div>
+  <script>
+    const dropdown = document.querySelector('nav div');
+    const trigger = dropdown.querySelector('a');
+    const menu = dropdown.querySelector('div');
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
+  </script>
+
 </nav>
 
-  
+<section>
+  <h2>Overview of the Project</h2>
+
+  <p><b>The Concrete Chorus Project</b> is a community science initiative investigating how urban environments shape bird diversity. Volunteers participate by collecting brief bird sound recordings at specific locations throughout their city using the free <b>Merlin Bird ID</b> app. This data will help us understand patterns like the "luxury effect," where wealthier neighborhoods sometimes—but not always—host greater biodiversity. We're also interested in learning more about how we can design cities to better support urban birds, given the alarming declines in bird populations all over the world. Your participation is key to understanding the concrete chorus!</p>
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+        <div style="flex: 1 1 200px; max-width: 45%; text-align: center;">
+          <img src="step_1.png" alt="Step 1: Find your location" style="max-width: 100%; height: auto;" />
+        </div>
+        <div style="flex: 1 1 200px; max-width: 45%; text-align: center;">
+          <img src="step_2.png" alt="Step 2: Download Merlin" style="max-width: 100%; height: auto;" />
+        </div>
+        <div style="flex: 1 1 200px; max-width: 45%; text-align: center;">
+          <img src="step_3.png" alt="Step 3: Make a recording" style="max-width: 100%; height: auto;" />
+        </div>
+        <div style="flex: 1 1 200px; max-width: 45%; text-align: center;">
+          <img src="step_4.png" alt="Step 4: Email it in" style="max-width: 100%; height: auto;" />
+        </div>
+      </div>
+    </section>
+
 </body>
 </html>
