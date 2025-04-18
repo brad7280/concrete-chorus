@@ -80,41 +80,103 @@
   <section>
 <h2>Step-by-Step Instructions for Volunteers</h2>
 
-<h3>1. Fill out the <a href="mailto:Bradley.Allf@colostate.edu">Volunteer Sign-up Form</a> .</h3>
+<h3>1. Fill out the <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5pOqz84G5fKajCVYJ56u8XP4eq2AizORy4WoWIJcOCnxaTA/viewform?usp=dialog">Volunteer Sign-up Form</a></h3>
+<ul>
+  <li>Based on your response to that form, we'll work with you to find a sampling location for you to "adopt" that is convenient for you (e.g. near your home or work).</li>
+  <li>Click the "Participating Cities" tab for a map of the sampling points in each city.</li>
+</ul>
 
-<h3>2. Choose Your Location(s)</h3>
+<h3>2. Visit your site</h3>
 <ul>
-  <li>Adopt one or more of the randomized sampling points in your city (see maps under the "Participating Cities" tab). Ideally this is a place near your home or work.</li>
-</ul>
-<h3>3. Recordings</h3>
-<ul>
-  <li>Visit your site 4 times between May and June 2025.</li>
-  <li>Record within 3 hours of sunrise so we can catch the morning chorus, when most birds are particularly vocal.</li>
+  <li>Once you complete the sign-up form, we'll ask you to visit your site 4 times between May and June 2025.</li>
+  <li>Make sure your site visit is within 3 hours of sunrise so you  catch the morning chorus, when most birds are particularly vocal.</li>
   <li>It's okay if you're not standing <i>exactly</i> on the marked point; try to be within about 50 yards of it.</li>
-  <li>Use the Merlin app: select “Sound ID,” record for 3 minutes, then email the file to <a href="mailto:Bradley.Allf@colostate.edu">Bradley.Allf@colostate.edu</a>.</li>
+  <li>Your four site visits should be spread out across the months of May and June according to the calendar below. You can make each recording anytime within the recording week, but we prefer if recordings are made on the days marked with a star (Sunday or Monday).</li>
 </ul>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+  <div style="flex: 1 1 200px; max-width: 45%; text-align: center;">
+    <img src="may_calendar.png" alt="May calendar" style="max-width: 100%; height: auto;" />
+  </div>
+  <div style="flex: 1 1 200px; max-width: 45%; text-align: center;">
+    <img src="june_calendar.png" alt="June calendar" style="max-width: 100%; height: auto;" />
+  </div>
+</div>
+
+  <h3>3. Make your recordings</h3>
+  <ul style="list-style: none; padding: 0;">
+    <li>During each site visit, you'll record 3 minutes of audio on your phone using the free <b>Merlin Bird ID</b> app. You can download it from the Apple App Store 
+      <a href="https://itunes.apple.com/app/apple-store/id773457673?pt=401711&ct=marketingwebsite&mt=8">here</a> 
+      or the Android Google Play store 
+      <a href="http://bit.ly/MerlinBirdIDAndroid">here</a>. Using the app is super easy! Click through the images below to learn how to make a recording.
+    </li>
+  </ul>
+
+  <div style="max-width: 400px; margin: 2rem auto; text-align: center;">
+    <img id="carousel-image" src="merlin_step1.jpeg" alt="Merlin App Screenshot" 
+      style="width: auto; max-width: 100%; max-height: 400px; margin: 0 auto; display: block; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);" />
+  
+    <!-- Moved caption OUT of the image positioning -->
+    <div id="carousel-caption" 
+      style="background: rgba(0, 0, 0, 0.5); color: white; padding: 0.5rem; font-size: 1rem; margin-top: 0.5rem; border-radius: 8px;">
+      1. Open the Merlin App
+    </div>
+  
+    <div style="position: relative; margin-top: 1rem;">
+      <button onclick="prevImage()" 
+        style="position: absolute; left: 0; font-size: 2rem; background: none; border: none; cursor: pointer; color: #264653;">
+        &#8592;
+      </button>
+      <button onclick="nextImage()" 
+        style="position: absolute; right: 0; font-size: 2rem; background: none; border: none; cursor: pointer; color: #264653;">
+        &#8594;
+      </button>
+    </div>
+  </div>
+  
+  
+
+
+
+  <script>
+    const images = [
+      { src: "merlin_step1.jpeg", caption: "1. Open the Merlin App" },
+      { src: "merlin_step2.jpeg", caption: "2. Click the big green Sound button to make a recording." },
+      { src: "merlin_step3.PNG", caption: "3. Let the recording run for three minutes. Merlin will automatically identify any birds it hears!" },
+      { src: "merlin_step4.jpeg", caption: "4. Stop the recording and click the upload button." },
+      { src: "merlin_step5.jpeg", caption: "5. (on iPhone): Click the Mail app to email your recording to bradley.allf@colostate.edu." },
+      { src: "merlin_step6.jpeg", caption: "6. Be sure to include the basic details about your recording (name, date, site name)." }
+    ];
+  
+    let currentIndex = 0;
+  
+    function showImage(index) {
+      document.getElementById("carousel-image").src = images[index].src;
+      document.getElementById("carousel-caption").textContent = images[index].caption;
+    }
+  
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    }
+  
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
+  </script>
+  
+
+
 <h3>4. Note Conditions</h3>
 <ul>
-  <li>Include a short description of the soundscape and any noise (traffic, lawnmowers, etc.).</li>
-  <li>Mention the species Merlin detected and weather conditions.</li>
-</ul>
-<h3>5. Be Observant</h3>
-<ul>
-  <li>If approached, explain the project politely. If asked to leave, do so and notify us.</li>
-</ul>
-<h3>6. Movement During Recording</h3>
-<ul>
-  <li>You can move gently but avoid making noise or leaving the immediate area.</li>
+  <li>After you email us your recording, we'll send a short followup email asking for a few additional details (your impression of the overall soundscape, the weather, etc.). Be sure to respond to this email promptly!</li>
 </ul>
   </section>
 
   <section>
-    <h2>Equipment Needed</h2><ul><li>Smartphone</li><li>Merlin Bird ID app (free download)</li><li>Internet to email recordings</li><li><em>Optional:</em> Volunteer hats or badges via New Hope Bird Alliance</li></ul>
+    <h2>Equipment Needed</h2><ul><li>Smartphone</li><li>Merlin Bird ID app (free download)</li><li>Internet to email recordings</li></ul>
       </section>
-
-      <section>
-        <h2>Schedule Overview</h2><ul><li>Week 1 (May 4–10): Round 1 recordings</li><li>Week 2 (May 18–24): Round 2 recordings</li><li>Week 3 (June 1–7): Round 3 recordings</li><li>Week 4 (June 15–21): Round 4 recordings</li></ul>
-          </section>
 
 </body>
 </html>
