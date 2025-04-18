@@ -55,22 +55,32 @@
   </header>
 
   <nav>
-  <a href="instructions.html">Instructions</a>
   <a href="background.html">Background</a>
-  <a href="participating_cities.html">Participating Cities</a>
+  <a href="instructions.html">Instructions</a>
   <a href="questions.html">Questions</a>
+  <div style="display: inline-block; position: relative;">
+    <a href="#" style="cursor: pointer;">Participating Cities ▾</a>
+    <div style="position: absolute; background: white; border: 1px solid #ccc; padding: 0.5rem; display: none;" onmouseleave="this.style.display='none'">
+      <a href="participating_cities_durham.html" style="display: block; margin: 0.2rem 0; color: #264653;">Durham</a>
+      <a href="participating_cities_chicago.html" style="display: block; margin: 0.2rem 0; color: #264653;">Chicago</a>
+    </div>
+  </div>
+  <script>
+    const dropdown = document.querySelector('nav div');
+    const trigger = dropdown.querySelector('a');
+    const menu = dropdown.querySelector('div');
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
+  </script>
+
 </nav>
 
 <section>
-  <h2>Durham</h2>
-  <p>Use the interactive map below to explore the 35 listening locations for our Durham project.</p>
-  <iframe src="durham_map.html" style="width: 100%; height: 600px; border: none;"></iframe>
-</section>
-
-<section>
   <h2>Chicago</h2>
-  <p>Use the interactive map below to explore the X listening locations for our Chicago project.</p>
-  <iframe src="durham_map.html" style="width: 100%; height: 600px; border: none;"></iframe>
+  <p>Use the interactive map below to explore the 35 listening locations for our Chicago project. Note that the exact locations for the Chicago sites have not yet been "nudged" to locations we know are publicly accessible, so don't worry if a particular point appears to be in a building or on private property.</p>
+  <iframe src="chicago_centroid_sample.html" style="width: 100%; height: 600px; border: none;"></iframe>
 </section>
 
 </body>
